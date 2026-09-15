@@ -1,0 +1,21 @@
+# Client data never goes into version control. Raw exports carry payroll and
+# revenue detail, and the inputs workbook carries the same figures derived.
+# The _demo client is synthetic and is the one deliberate exception; _template
+# holds empty folders only.
+#
+# Patterns match directory *contents* rather than the directories themselves,
+# because git will not descend into an excluded directory to honour a negation.
+clients/*/raw/**
+clients/*/output/**
+clients/*/config/client-config.xlsx
+!clients/_demo/raw/**
+!clients/_template/raw/**
+!clients/_template/config/client-config.xlsx
+!clients/*/output/.gitkeep
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+~$*.xlsx
